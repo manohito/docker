@@ -5,7 +5,7 @@ RUN apt-get install -y git curl
 RUN apt-get install -y build-essential libssl-dev rbenv ruby-build
 RUN echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
 RUN apt-get install -y libffi-dev
-RUN apt-get install -y libpq-dev nodejs npm nodejs-legacy
+RUN apt-get update -qq && apt-get install -y build-essential libpq-dev nodejs nodejs-legacy
 
 ARG user=jenkins
 ARG group=jenkins
